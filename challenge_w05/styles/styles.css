@@ -1,0 +1,27 @@
+.logo {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.circular-photo {
+  border-radius: 50%;
+}
+
+nav {
+  background-color: grey;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav img {
+  height: 200px;
+  width: fit-content;
+  border: 9px solid dimgray;
+  margin: 0px;
+}
+
+div section {
+  display: inline-block;
+  padding: 33px;
+}
