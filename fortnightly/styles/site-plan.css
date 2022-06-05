@@ -16,10 +16,14 @@ Fonts are separated by a | */
   --paragraph-font: 'Montserrat', sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: var(--primary-color);  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: --secondary-color; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --headline-color-on-white: var(--primary-color);
+  /* headlines on a white background */
+  --headline-color-on-color: white;
+  /* headlines on a colored background */
+  --paragraph-color-on-white: var(--secondary-color);
+  /* paragraph text on a white background */
+  --paragraph-color-on-color: white;
+  /* paragraph text on a colored background */
   --paragraph-background-color: var(--accent3-color);
   --nav-link-color: white;
   --nav-background-color: var(--primary-color);
@@ -37,29 +41,41 @@ body {
   font-size: 18px;
   text-align: center;
 }
+
 img {
   display: block;
   margin: 0 auto;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
+  color: #937a9b /*var(--headline-color-on-white)*/;
 }
+
 h2 {
   text-align: center;
 }
+
 hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
 }
+
 header {
   padding: 1em;
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
+
+header>h1,
+header>h2 {
   color: var(--headline-color-on-color);
 }
 
@@ -68,16 +84,19 @@ p {
   color: var(--paragraph-color);
   padding: 1em;
 }
+
 .colors {
   width: 100%;
   min-width: 350px;
   margin: 30px auto;
   text-align: center;
 }
+
 .colors th {
   background-color: #f8c9ff;
 }
-.colors td{
+
+.colors td {
   width: 20%;
   height: 3em;
 }
@@ -85,19 +104,24 @@ p {
 .primary {
   background-color: var(--primary-color);
 }
+
 .secondary {
   background-color: var(--secondary-color);
 }
+
 .accent1 {
   background-color: var(--accent1-color);
 }
+
 .accent2 {
   background-color: var(--accent2-color);
 }
-.accent3{
+
+.accent3 {
   background-color: var(--accent3-color);
 }
-p .colored {
+
+p.colored {
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-color-on-color);
 }
@@ -108,21 +132,26 @@ nav {
   text-align: center;
   font-size: 1.2em;
 }
-nav  {
+
+nav {
   list-style-type: none;
   display: flex;
 
 }
+
 nav a {
-  padding:1em;
+  padding: 1em;
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
 
 }
-nav a:link, nav a:visited {
+
+nav a:link,
+nav a:visited {
   color: var(--nav-link-color);
 }
+
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
@@ -139,21 +168,25 @@ nav a:hover {
     ". left left right right ."
     "page2 page2 . . page3 page3";
 }
-.sitemap > div {
+
+.sitemap>div {
 
   text-align: center;
 
 }
+
 .sm-home {
   grid-area: home;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page2 {
   grid-area: page2;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page3 {
   grid-area: page3;
   background-color: #ccc;
