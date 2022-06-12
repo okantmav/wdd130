@@ -18,16 +18,16 @@ Fonts are separated by a | */
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: var(--primary-color);
   /* headlines on a white background */
-  --headline-color-on-color: white;
+  --headline-color-on-color: #2c242e;
   /* headlines on a colored background */
-  --paragraph-color-on-white: var(--secondary-color);
+  --paragraph-color-on-white: #2c242e;
   /* paragraph text on a white background */
-  --paragraph-color-on-color: white;
+  --paragraph-color-on-color: #2c242e;
   /* paragraph text on a colored background */
   --paragraph-background-color: var(--accent3-color);
-  --nav-link-color: white;
+  --nav-link-color: #2c242e;
   --nav-background-color: var(--primary-color);
-  --nav-hover-link-color: white;
+  --nav-hover-link-color: #33221b;
   --nav-hover-background-color: var(--accent2-color);
 }
 
@@ -54,7 +54,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: #937a9b /*var(--headline-color-on-white)*/;
+  color: var(--headline-color-on-color) /*var(--headline-color-on-white)*/;
 }
 
 h2 {
@@ -81,7 +81,7 @@ header>h2 {
 
 p {
   font-family: var(--paragraph-font);
-  color: var(--paragraph-color);
+  color: var(--paragraph-color-on-color);
   padding: 1em;
 }
 
