@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
+
+
+:root {
+  /*Color palette*/
+  --primary-color: #3f5b8b;
+  --secondary-color: #9b929b;
+  --accent1-color: #1e1e1e;
+  --accent2-color: #7387aa;
+  --accent3-color: #f3f5f8;
+  /*Web site fonts*/
+  --heading-font: 'Roboto Serif', sans-serif;
+  --paragraph_font: 'Roboto', sans-serif;
+}
+
+#content {
+  width: 300px;
+  height: max-content;
+  margin: 0 auto;
+  background-color: var(--accent3-color);
+  overflow: hidden;
+  border-radius: 24px;
+  
+
+}
+
+.post-title {
+  font-family: var(--heading-font);
+}
+
+.posting-date {
+  color: var(--accent2-color);
+}
+
+.post-text {
+  color: var(--secondary-color);
+  margin: 24px;
+}
+
+.post-title,
+.posting-date,
+.post-text {
+  text-align: center;
+}
+
+.posting-date,
+.post-text {
+  font-family: var(--paragraph_font);
+  font-weight: bold;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 33px);
+  column-gap: 3px;
+}
+
+.total-read {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.read {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.total-views {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.views {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.total-comments {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.comments {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.total-comments,
+.total-read,
+.total-views,
+.comments,
+.read,
+.views {
+  text-align: center;
+  align-content: center;
+  margin: 9px 9px;
+}
+
+body {
+  background-color: var(--accent1-color);
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent3-color);
+}
+
+footer h2 {
+  font-size: 21px;
+}
+
+footer h3 {
+  font-size: 10px;
+}
