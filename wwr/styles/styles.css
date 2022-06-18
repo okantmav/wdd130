@@ -3,7 +3,7 @@
 :root {
   /*Color palette*/
   --primary-color: #D9A404;
-  --seconday-color: #025940;
+  --secondary-color: #025940;
   --accent1-color: #010D00;
   --accent2-color: #D2D6D9;
   --accent3-color: #89A61F;
@@ -31,25 +31,34 @@
   z-index: -1;
 }
 
+#rivers-msg,
 #hero-msg {
   grid-column: 2/3;
   grid-row: 1/2;
   margin-top: 100px;
 }
 
+#rivers-msg {
+  color: var(--accent2-color);
+}
+
 #hero-msg h1,
-#hero-msg h4 {
+#hero-msg h4,
+#rivers-msg h1,
+#rivers-msg p {
   text-align: center;
 }
 
 #hero-img {
   width: 100%;
+  opacity: 0.6;
 }
 
 #background {
   height: 725px;
   background-color: var(--primary-color);
-  margin-top: 200px;
+  margin-top: 120px;
+  margin-bottom: 120px;
   grid-column: 1/11;
   grid-row: 4/9;
 }
@@ -81,6 +90,11 @@
   grid-template-columns: repeat(10, 1fr);
 }
 
+.rivers-grid {
+  display: grid;
+  grid-template-columns: repeat(26, 1fr);
+}
+
 .msg {
   background-color: var(--accent1-color);
   line-height: 1.5em;
@@ -88,6 +102,15 @@
   grid-column: 6/10;
   grid-row: 6/7;
   box-shadow: 5px 5px 10px var(--accent1-color);
+}
+
+.contactus-msg {
+  background-color: var(--accent3-color);
+  line-height: 1.5em;
+  padding: 35px;
+  margin-top: 24px;
+  grid-column: 6/10;
+  grid-row: 1/2;
 }
 
 .msg h2 {
@@ -102,13 +125,13 @@
 }
 
 .card-img {
-  border: 10px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   transition: transform .5s;
   box-shadow: 5px 5px 10px var(--accent1-color);
 }
 
 .card-img:hover {
-  opacity: .6;
+  opacity: .9;
   transform: scale(1.1);
 }
 
@@ -121,7 +144,11 @@
 .camping-cards,
 .rapids-cards,
 .mountains {
-  margin: 300px 0;
+  margin: 120px 0;
+}
+
+.border-card {
+  margin: 36px;
 }
 
 .rivers-cards {
@@ -145,6 +172,147 @@
   box-shadow: 5px 5px 10px var(--accent1-color);
 }
 
+.rivers-grid h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 7px;
+  color: var(--accent1-color);
+}
+
+.rivers-grid h3:hover{
+  font-weight: 100;
+  color: var(--accent2-color);
+  background-color: var(--secondary-color);
+}
+
+.rivers-grid p {
+  font-size: 18px;
+  color: var(--accent1-color);
+}
+
+.option-one,
+.option-two,
+.option-three {
+  background-color: var(--accent2-color);
+  border-radius: 24px;
+}
+
+.option-one {
+  grid-column: 2/9;
+}
+
+.option-two {
+  grid-column: 10/17;
+}
+
+.option-three {
+  grid-column: 18/25;
+}
+/*----------------*/
+.name-river-one {
+  grid-row: 1/2;
+}
+
+.river-icon-one {
+  grid-row: 2/3;
+}
+.p-river-one {
+  grid-row: 3/6;
+}
+.fire-icon-one {
+  grid-row: 6/7;
+}
+
+.p-fire-one {
+  grid-row: 7/10;
+}
+
+.rivers-card-one {
+  grid-row: 10/14;
+}
+
+.oars-icon-one {
+  grid-row: 14/15;
+}
+
+.p-oars-one {
+  grid-row: 15/20;
+}
+
+.book-button-one {
+  grid-row: 20/21;
+}
+/*----------------*/
+.name-river-two {
+  grid-row: 1/2;
+}
+
+.river-icon-two {
+  grid-row: 2/3;
+}
+.p-river-two {
+  grid-row: 3/6;
+}
+.fire-icon-two {
+  grid-row: 6/7;
+}
+
+.p-fire-two {
+  grid-row: 7/10;
+}
+
+.rivers-card-two {
+  grid-row: 10/14;
+}
+
+.oars-icon-two {
+  grid-row: 14/15;
+}
+
+.p-oars-two {
+  grid-row: 15/20;
+}
+
+
+.book-button-two {
+  grid-row: 20/21;
+}
+/*----------------*/
+.name-river-three {
+  grid-row: 1/2;
+}
+
+.river-icon-three {
+  grid-row: 2/3;
+}
+.p-river-three {
+  grid-row: 3/6;
+}
+.fire-icon-three {
+  grid-row: 6/7;
+}
+
+.p-fire-three {
+  grid-row: 7/10;
+}
+
+.rivers-card-three {
+  grid-row: 10/14;
+}
+
+.oars-icon-three {
+  grid-row: 14/15;
+}
+
+.p-oars-three {
+  grid-row: 15/20;
+}
+
+.book-button-three {
+  grid-row: 20/21;
+}
+/*----------------*/
+
 .button-box {
   text-align: center;
 }
@@ -160,9 +328,13 @@
   border-radius: 10px;
 }
 
+.rivers-grid .book {
+  border: 1px solid var(--accent1-color) ;
+}
+
 .book:hover,
 .join:hover {
-  background-color: var(--seconday-color);
+  background-color: var(--secondary-color);
   color: var(--accent2-color);
 }
 
@@ -223,7 +395,7 @@ footer h3 a:hover {
 }
 
 footer a {
-  color: var(--seconday-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -236,11 +408,12 @@ footer .social img {
 }
 
 h2 {
+  color: var(--accent2-color);
   margin: 0;
 }
 
 h4 {
-  color: var(--primary-color);
+  color: var(--accent2-color);
 }
 
 
@@ -248,7 +421,8 @@ h4 {
 @media screen and (max-width: 900px) {
 
   #hero,
-  .home-grid {
+  .home-grid,
+  .rivers-grid {
     display: block;
     height: auto;
   }
@@ -267,10 +441,12 @@ h4 {
     margin-top: 0;
   }
 
+  #rivers-msg,
   #hero-msg {
     margin-top: 0;
   }
 
+  #rivers-msg p,
   #hero-msg h4 {
     display: none;
   }
