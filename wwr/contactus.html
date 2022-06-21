@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Whitewater Rafting Vacations | Dry Oar Boating | Contact Us</title>
+
   </head>
 
   <body>
@@ -23,27 +24,65 @@
         </nav>
       </header>
 
-        <section id="hero-msg">
-        
-      <main class="home-grid">
-        <section class="contactus-msg">
-          <h2>Rates & Dates</h2>
-          <p>Contact us to get more information about what trips are available, when trips are available, and how much they cost.
-          </p>
-          <a class="join" onclick="alert('Thank you for your visit!')">Email</a>
-        </section>
-      </main>
-      <footer>
-        <h3>Dry Oar &copy; 2022 - Marco A. Macias</h3>
-        <h3><a href="site-plan-fating.html">Site Plan</a></h3>
-        <h3><a href="contactus.html">Contact Us</a></h3>
-        <div class="social">
-          <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="fb icon"></a>
-          <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter icon"></a>
-          <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
-        </div>
-      </footer>
+      <section id="hero-msg">
+
+        <main class="home-grid">
+          <div id="feedback"></div>
+          <form class="contactus-form" action="files/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+              </li>
+              <li>
+                <label for="mail">E_mail:</label>
+                <input type="email" id="mail" name="user_email">
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+                <textarea name="user_message" id="u-msg" cols="30" rows="10">Tell us about you and let us what trip your are looking for!
+                </textarea>
+              <li class="button">
+                <button type="submit">Send</button>
+              </li>
+              </li>
+            </ul>
+          </form>
+          <section class="contactus-msg">
+            <h2>Rates & Dates</h2>
+            <p>Contact us to get more information about what trips are available, when trips are available, and how much
+              they cost.
+            </p>
+          </section>
+        </main>
+        <footer>
+          <h3>Dry Oar &copy; 2022 - Marco A. Macias</h3>
+          <h3><a href="site-plan-fating.html">Site Plan</a></h3>
+          <h3><a href="contactus.html">Contact Us</a></h3>
+          <div class="social">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="fb icon"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
+          </div>
+        </footer>
     </div>
+    <script>
+      const feedbackElement = document.getElementById('feedback');
+
+      const formElement = document.forms[0];
+
+      formElement.addEventListener('submit', function (e) {
+
+        e.preventDefault();
+
+        feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value +
+          '! Thank you for your message. We will get back with you as soon as possible!';
+
+        feedbackElement.style.display = 'block';
+
+        document.body.classList.toggle('moveDown');
+      });
+    </script>
   </body>
 
 </html>
