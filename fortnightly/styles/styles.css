@@ -7,6 +7,11 @@
   --accent1-color: #A9FFB7;
   --accent2-color: #FFAA89;
   --accent3-color: #9FD4FF;
+  --basic1-color: white;
+  --basic2-color: black;
+
+  --alt1-color: #F9F2FB;
+  --alt2-color: #C07DD5;
 
   /* change the values below to your chosen font(s) */
   --heading-font: 'Courier Prime', monospace;
@@ -21,11 +26,11 @@
   /* paragraph text on a white background */
   --paragraph-color-on-color: #2c242e;
   /* paragraph text on a colored background */
-  --paragraph-background-color: var(--accent3-color);
-  --nav-link-color: #2c242e;
-  --nav-background-color: var(--primary-color);
-  --nav-hover-link-color: #33221b;
-  --nav-hover-background-color: var(--accent2-color);
+  --paragraph-background-color: var(--secondary-color);
+  --nav-link-color: var(--basic2-color);
+  --nav-background-color: var(--basic1-color);
+  --nav-hover-link-color: var(--alt2-color);
+  --nav-hover-background-color: var(--alt1-color);
 }
 
 #content {
@@ -44,25 +49,57 @@
 }
 
 .logo {
-  width: 500px;
+  width: 620px;
+}
+
+.footer-logo {
+  width: 420px;
+}
+
+.card-img {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  transition: transform .5s;
+  border-radius: 12px;
+}
+
+.card-img:hover {
+  opacity: .9;
+  transform: scale(1.1);
 }
 
 .hero-msg {
   margin-top: 100px;
 }
 
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 33px 1fr;
+#hero .hero-msg p {
+  margin-top: 100px;
+  font-weight: bold;
 }
 
-.ub, .ews{
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 55px 1fr;
+}
+
+.ub,
+.ews,
+.first-quote {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.ub-photo, .ews-photo {
+
+.ub-photo,
+.ews-photo,
+.family-photo {
   grid-column: 3/4;
   grid-row: 1/2;
+}
+
+.ud,
+.second-quote {
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
 .ews-large-photo {
@@ -70,13 +107,9 @@
   grid-row: 2/5;
 }
 
-
-.ud {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.li, .essentials {
+.li,
+.ews-essentials,
+.girl-photo {
   grid-column: 3/4;
   grid-row: 2/3;
 }
@@ -86,64 +119,183 @@
   grid-row: 3/4;
 }
 
-.topg-photo, .wants  {
+.topg-photo,
+.ews-wants {
   grid-column: 3/4;
   grid-row: 3/4;
 }
 
-.savings {
-  
+.ews-savings {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footer-logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.about {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.contact {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.site-plan {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+
+.social {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.about,
+.contact,
+.site-plan,
+.social {
+  align-self: center;
+  justify-self: center;
+}
+
+.designer {
+  grid-column: 1/6;
+  grid-row: 3/4;
+  text-align: right;
+  padding: 5px;
+  align-self: center;
+  justify-self: stretch;
+  border-top: 5px solid var(--primary-color);
+}
+
+header {
+  background-color: var(--nav-background-color);
+  border-bottom: 5px solid var(--alt1-color);
+  display: grid;
+  grid-template-columns: auto 900px auto;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
+  font-weight: bold;
 }
 
 nav a {
+  display: table-cell;
   text-align: center;
   text-decoration: none;
-  color: var(--accent1-color);
-  padding: 35px;
+  color: var(--basic2-color);
+  padding: 33px;
+  position: relative;
+  width: 360px;
+  height: 24px;
+  margin-top: 4em;
 }
 
 nav a:hover {
-  background-color: var(--accent1-color);
-  color: var(--primary-color);
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+  border-radius: 24px;
 }
 
-header {
-  background-color: var(--primary-color);
-  display: grid;
-  grid-template-columns: 150px auto;
+body {
+  font-family: var(--paragraph-font);
+  font-size: 22px;
+}
+
+.ub,
+.ews,
+.first-quote,
+.ub-photo,
+.ews-photo,
+.family-photo,
+.ud,
+.second-quote,
+.ews-large-photo,
+.li,
+.ews-essentials,
+.girl-photo,
+.topg,
+.topg-photo,
+.ews-wants,
+.ews-savings {
+  padding: 36px;
+}
+
+.ub:hover,
+.ews:hover,
+.first-quote:hover,
+.ub-photo:hover,
+.ews-photo:hover,
+.family-photo:hover,
+.ud:hover,
+.second-quote:hover,
+.ews-large-photo:hover,
+.li:hover,
+.ews-essentials:hover,
+.girl-photo:hover,
+.topg:hover,
+.topg-photo:hover,
+.ews-wants:hover,
+.ews-savings:hover {
+  padding: 24px;
+  border: 1px solid var(--alt1-color);
+  background-color: var(--paragraph-background-color);
+  border-radius: 12px;
+  opacity: .8;
 }
 
 footer {
-  background-color: var(--primary-color);
-  padding: 25px 50px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  font-family: var(--heading-font);
+  background-color: var(--alt1-color);
 }
 
 footer h3 {
-  color: var(--accent1-color);
+  font-size: 24px;
 }
 
-footer h3 a:hover {
-  text-decoration: underline;
-}
+/*footer .social .card-social {
+  width: 0.3em;
+}*/
 
-footer a {
-  color: var(--secondary-color);
+footer h3 {
+  color: var(--basic2-color);
   text-decoration: none;
 }
 
-footer a:hover {
-  color: var(--accent2-color);
+footer h3 a {
+  color: var(--basic2-color);
+  text-decoration: none;
 }
 
-footer .social img {
-  padding-top: 15px;
+footer h3 a:hover {
+  color: var(--alt2-color);
+  text-decoration: underline;
+}
+
+footer h4 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+#page1 .link1,
+#page2 .link2,
+#page3 .link3 {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+  border-radius: 24px;
 }
