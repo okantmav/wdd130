@@ -39,21 +39,22 @@
 }
 
 #hero {
-  margin-top: 100px;
+  margin-top: 320px;
+  margin-bottom: 60px;
+  margin-left: 36px;
+  padding-right: 24px;
 }
 
 #logo_link {
-  padding-top: 5px;
-  justify-self: center;
-  align-self: center;
+  margin-top: 36px;
 }
 
 .logo {
-  width: 620px;
+  width: 390px;
 }
 
 .footer-logo {
-  width: 420px;
+  width: 240px;
 }
 
 .card-img {
@@ -66,6 +67,10 @@
 .card-img:hover {
   opacity: .9;
   transform: scale(1.1);
+}
+
+.card-social {
+  width: 24px;
 }
 
 .hero-msg {
@@ -178,9 +183,23 @@
   border-top: 5px solid var(--primary-color);
 }
 
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main {
+  padding: 160px;
+  margin-top: 300px;
+}
+
 header {
   background-color: var(--nav-background-color);
-  border-bottom: 5px solid var(--alt1-color);
+  border-bottom: 5px solid var(--alt2-color);
+  box-shadow: 0 2px var(--alt1-color);
   display: grid;
   grid-template-columns: auto 900px auto;
 }
@@ -188,15 +207,17 @@ header {
 nav {
   display: flex;
   justify-content: space-around;
+  font-family: var(--heading-font);
   font-weight: bold;
 }
 
 nav a {
+  float: left;
   display: table-cell;
   text-align: center;
   text-decoration: none;
   color: var(--basic2-color);
-  padding: 33px;
+  padding: 33px 24px;
   position: relative;
   width: 360px;
   height: 24px;
@@ -212,6 +233,7 @@ nav a:hover {
 body {
   font-family: var(--paragraph-font);
   font-size: 22px;
+  margin: 0;
 }
 
 .ub,
@@ -265,11 +287,9 @@ footer h3 {
   font-size: 24px;
 }
 
-/*footer .social .card-social {
-  width: 0.3em;
-}*/
 
 footer h3 {
+  font-size: 18px;
   color: var(--basic2-color);
   text-decoration: none;
 }
@@ -285,12 +305,14 @@ footer h3 a:hover {
 }
 
 footer h4 {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 h4 {
   font-size: 12px;
 }
+
+
 
 #page1 .link1,
 #page2 .link2,
