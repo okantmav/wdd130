@@ -75,6 +75,7 @@
 
 .hero-msg {
   margin-top: 100px;
+  padding: 33px;
 }
 
 #hero .hero-msg p {
@@ -84,7 +85,8 @@
 
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 55px 1fr;
+  grid-template-columns: 1fr 33px 1fr;
+  padding: 33px;
 }
 
 .ub,
@@ -119,12 +121,12 @@
   grid-row: 2/3;
 }
 
-.topg {
+.topg-photo {
   grid-column: 1/2;
   grid-row: 3/4;
 }
 
-.topg-photo,
+.topg,
 .ews-wants {
   grid-column: 3/4;
   grid-row: 3/4;
