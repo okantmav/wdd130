@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Montserrat&display=swap");
 
 :root {
   /* colors palette */
-  --primary-color: #DCB7E8;
-  --secondary-color: #FFE570;
-  --accent1-color: #A9FFB7;
-  --accent2-color: #FFAA89;
-  --accent3-color: #9FD4FF;
+  --primary-color: #dcb7e8;
+  --secondary-color: #ffe570;
+  --accent1-color: #a9ffb7;
+  --accent2-color: #ffaa89;
+  --accent3-color: #9fd4ff;
   --basic1-color: white;
   --basic2-color: black;
 
-  --alt1-color: #F9F2FB;
-  --alt2-color: #C07DD5;
+  --alt1-color: #f9f2fb;
+  --alt2-color: #c07dd5;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: 'Courier Prime', monospace;
-  --paragraph-font: 'Montserrat', sans-serif;
+  --heading-font: "Courier Prime", monospace;
+  --paragraph-font: "Montserrat", sans-serif;
 
   /* these colors below should be chosen from among the palette colors above */
   --headline-color-on-white: var(--primary-color);
@@ -60,12 +60,12 @@
 .card-img {
   width: 100%;
   border: 1px solid var(--primary-color);
-  transition: transform .5s;
+  transition: transform 0.5s;
   border-radius: 12px;
 }
 
 .card-img:hover {
-  opacity: .9;
+  opacity: 0.9;
   transform: scale(1.1);
 }
 
@@ -278,7 +278,7 @@ body {
   border: 1px solid var(--alt1-color);
   background-color: var(--paragraph-background-color);
   border-radius: 12px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 footer {
@@ -333,7 +333,7 @@ h4 {
 
   #hero,
   .home-grid,
-  .footer-grid  {
+  .footer-grid {
     display: block;
     height: auto;
   }
@@ -353,7 +353,6 @@ h4 {
     margin-top: 0;
   }
 
- 
   #hero-msg {
     margin-top: 500px;
   }
@@ -366,12 +365,12 @@ h4 {
     font-size: 25px;
     color: #6f7364;
   }
-  
+
   .logo {
     width: 240px;
   }
 
-  .card-img  {
+  .card-img {
     margin: auto;
     width: 100%;
   }
